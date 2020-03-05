@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="style.js"></script>
+    
+    
+</head>
+<body ng-app="myModule">
+    <div class="w3-container w3-black" ng-controller="myController">
+        angular start
+        4+5={{ message }}
+        <div>
+            <p>
+               First Name {{ employee.firstname }}
+               <br>
+               Last Name{{ employee.lastname }}
+               <br>
+               Gender{{ employee.gender }}
+            </p>
+        </div>
+
+        <div class="">
+            {{ country.name }}
+        </div>
+        <div>
+            {{ country.capital }}
+        </div>
+        <div>
+            <img ng-src="{{ country.flag }}" alt="{{ country.name }}">
+        </div>
+
+  
+
+    <div>
+        <input type="text" id="" ng-model="farmer.name">
+        <input type="text" id="" ng-model="farmer.username">
+        <input type="text" id="" ng-model="farmer.age">
+
+    </div>
+    <div>
+        <p>
+            {{ farmer.name }}
+            {{ farmer.username }}
+            {{ farmer.age }}
+        </p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Age</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp in employees">
+
+                <td>{{ emp.firstname }}</td>
+                <td>{{ emp.lastname }}</td>
+                <td>{{ emp.age }}</td>
+                <td> {{ emp.salary }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+    
+</body>
+</html>
